@@ -16,6 +16,9 @@ nav{
 .one{
     font-size: 36px;
 }
+strong{
+    color: rgba(15, 92, 168, 0.969);
+}
 
 @media (max-width:600px) {
     html,body{
