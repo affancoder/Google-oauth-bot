@@ -8,6 +8,14 @@
 .rightSection{
     /* background-color: blue; */
 }
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+.one{
+    font-size: 36px;
+}
 
 @media (max-width:600px) {
     html,body{
