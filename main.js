@@ -1,7 +1,9 @@
 const app = require("express")();
 const express = require("express");
 const path = require("path");
+const dotenv = require("dotenv");
 
+dotenv.config();
 const PORT = 3000;
 
 const session = require('express-session');
@@ -22,7 +24,7 @@ const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 passport.use(new GoogleStrategy({
     clientID:"1028585814559-p73tfia0htgmm81jve7o39dqege5pq1f.apps.googleusercontent.com",
     clientSecret:"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",
-    callbackURL:"http://localhost:3000/auth/google/callback"
+    callbackURL:`${process.env.GOOGLE_CALLBACK}/auth/google/callback`
 },
     function(accessToken,refreshToken,profile,done){
         console.log(profile);
